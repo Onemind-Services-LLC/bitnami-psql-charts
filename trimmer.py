@@ -11,7 +11,7 @@ with open("bitnami/index.yaml", "r") as f:
 print("Read the entries...")
 # Remove all the entries except postgresql-ha
 for key in list(data["entries"].keys()):
-    if key != "postgresql-ha":
+    if key != "kube-state-metrics":
         print("Removing entry: %s" % key)
         del data["entries"][key]
 
